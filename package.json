@@ -4,6 +4,10 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint: fix": "eslint --fix",
+    "prettier": "npx prettier --write .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +23,11 @@
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
   }
 }
